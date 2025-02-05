@@ -1,0 +1,116 @@
+// Array user defined number in integer
+
+public class Array
+{
+    public static void main(String [] args)
+
+    {
+        int n[]={1,2,3,4};
+
+        System.out.println("the number is " +n[2]);
+    }
+}
+
+//Array using for loop
+
+public class Array
+{
+    public static void main(String [] args)
+
+    {
+        int n[]={1,2,3,4};
+        n[2]=4;
+
+        for (int i=0;i<=3;i++)
+        {
+          System.out.println(n[i]);
+        }
+        
+    }
+}
+//Two dimentional array print
+
+import java.util.Scanner;
+
+public class Array {
+    public static void main(String[] args) {
+        Scanner src = new Scanner(System.in);  // Corrected "Scannar" to "Scanner"
+        
+        // Define the dimensions of the 2D array
+        int r = 3;  // Rows
+        int c = 3;  // Columns
+        
+        // Initialize the 2D array with the given dimensions
+        int[][] a = new int[r][c];  // Changed array name to 'a'
+        
+        // Input elements for the 2D array
+        System.out.println("Enter elements for a 3x3 2D array (row by row):");
+        
+        // Declare the loop variables
+        int i, j;
+        
+        // Loop for rows
+        for(i = 0; i < r; i++) {  // Fixed loop condition to i < r (not i <= r)
+            for(j = 0; j < c; j++) {  // Fixed loop condition to j < c (not j <= c)
+                System.out.print("Enter value for element [" + i + "][" + j + "]: ");
+                a[i][j] = src.nextInt();  // Using correct variable 'a' instead of 'array'
+            }
+        }
+        
+        // Display the 2D array
+        System.out.println("\nThe entered 2D array is:");
+        for(i = 0; i < r; i++) {
+            for(j = 0; j < c; j++) {
+                System.out.print(a[i][j] + " ");  // Corrected array name 'a'
+            }
+            System.out.println();  // Move to the next line after each row
+        }
+    }
+}
+
+Enter elements for a 3x3 2D array (row by row):
+Enter value for element [0][0]: 1
+Enter value for element [0][1]: 1
+Enter value for element [0][2]: 1
+Enter value for element [1][0]: 1
+Enter value for element [1][1]: 1
+Enter value for element [1][2]: 1
+Enter value for element [2][0]: 1
+Enter value for element [2][1]: 1
+Enter value for element [2][2]: 1
+
+The entered 2D array is:
+1 1 1
+1 1 1
+1 1 1
+PS C:\Users\hafiz Mohammed\Desktop\New folder\java> javac Array.java
+PS C:\Users\hafiz Mohammed\Desktop\New folder\java> java Array      
+Enter elements for a 3x3 2D array (row by row):
+Enter value for element [0][0]: 47
+Enter value for element [0][1]: 78
+Enter value for element [0][2]: 98 
+Enter value for element [1][0]: 756
+Enter value for element [1][1]: 2'
+Exception in thread "main" java.util.InputMismatchException
+        at java.base/java.util.Scanner.throwFor(Scanner.java:947)
+        at java.base/java.util.Scanner.next(Scanner.java:1602)
+        at java.base/java.util.Scanner.nextInt(Scanner.java:2267)
+        at java.base/java.util.Scanner.nextInt(Scanner.java:2221)
+        at Array.main(Array.java:24)
+PS C:\Users\hafiz Mohammed\Desktop\New folder\java> javac Array.java
+PS C:\Users\hafiz Mohammed\Desktop\New folder\java> java Array      
+Enter elements for a 3x3 2D array (row by row):
+Enter value for element [0][0]: 23
+Enter value for element [0][1]: 43
+Enter value for element [0][2]: 45
+Enter value for element [1][0]: 23
+Enter value for element [1][1]: 45
+Enter value for element [1][2]: 67
+Enter value for element [2][0]: 111
+Enter value for element [2][1]: 445
+Enter value for element [2][2]: 56
+
+The entered 2D array is:
+23 43 45
+23 45 67
+111 445 56
