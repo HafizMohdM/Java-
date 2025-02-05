@@ -1,0 +1,30 @@
+public class Str{
+   public static void main(String[] args){
+      String a = "HAfiz";
+
+      System.out.println("My name is"+a);
+   }
+}
+
+//To know the character in specified index
+
+public class Str {
+   public static void main(String[] args) {
+      String a = "HAfiz";
+
+      System.out.println("Hello " + a);           // This prints "Hello HAfiz"
+      System.out.println(a.charAt(2));            // This prints 'f', as the character at index 2 is 'f'
+   }
+}
+
+
+//String buffer 
+  // used to store the value in a heap as it will reserve space for each value 
+
+   public class Str {
+   public static void main(String[] args) {
+      StringBuffer sb= new StringBuffer("Hafiz");
+      System.out.println(sb.length());
+   }
+} 
+
