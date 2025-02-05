@@ -1,0 +1,55 @@
+//without parameter
+
+
+class Hello{
+    static void printmessage()
+    {
+        System.out.println("Hello World");
+    }
+
+public static void main(String[] args) {
+    printmessage();
+    printmessage();
+    printmessage();
+}
+}
+
+//with one parameter
+
+class Hello{
+    static void printmessage(String name)
+    {
+        System.out.println("Hello "+name);
+    }
+
+public static void main(String[] args) {
+    printmessage( "anil");
+    printmessage( "param");
+    printmessage( "chand");
+}
+}
+
+
+//with return value
+
+
+class Calculator{
+
+    public int add (int n1,int n2)
+       {
+        return n1 + n2;
+        
+       }
+}
+
+public class demo {
+
+    public static void main(String[] args) {
+      int n1=5;
+      int n2=7;
+      Calculator obj= new Calculator();
+      int r1 = obj.add(n1, n2);
+      System.out.println(r1);
+    }
+    
+}
