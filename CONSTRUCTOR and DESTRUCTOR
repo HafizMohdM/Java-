@@ -1,0 +1,51 @@
+
+
+class cons{
+    int roll;
+    private String name;
+    String subject;
+    
+    public cons()  //DEFAULT CONSTRUCTOR
+    {
+        name= "Hafiz";
+        subject="maths";
+        System.out.println("In constructor");
+    }
+
+    public cons(int r, String n)   //PARAMETERIZED CONSTRUCTOR
+    {
+        roll=r;
+        subject=n;
+    }
+
+    public String getName()
+                   {
+                  return name;
+                   }
+                public void setname(String n)
+                   {
+                    name=n;
+                   }
+                            
+}
+
+public class constructor
+{
+    public static void main(String [] args)
+  {
+    cons obj = new cons();
+    cons obj1=new cons(13,"bharat");
+
+     //obj.roll= 10;
+     //obj.setname("Hafiz");
+     //obj.subject="Maths";
+
+     System.out.println(obj.getName());    
+     System.out.println(obj.subject);
+     System.out.println(obj.roll);
+     
+     System.out.println(obj1.subject);   //OUTPUT OF PARSMETERIZED CONSTRUCTOR
+     System.out.println(obj1.roll);
+
+  }
+}
