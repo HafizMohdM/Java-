@@ -1,0 +1,50 @@
+//APPEND:
+  
+
+ADD the string to the end of the word
+
+public class Str {
+   public static void main(String[] args) {
+      StringBuffer sb= new StringBuffer("Hafiz");
+      System.out.println(sb.length());
+      sb.append("mohd");
+
+     
+      System.out.println(sb);
+   }
+} 
+
+//INSERT
+//Insert strings to the sepecified position
+public class Str {
+   public static void main(String[] args) {
+      StringBuffer sb= new StringBuffer("Hafiz");
+      System.out.println(sb.length());
+      
+
+      sb.insert(5, "mohd");
+      System.out.println(sb);
+   }
+} 
+
+
+INDEX OF TWO SAME VALUE IN A STRING
+
+public class Str {
+   public static void main(String[] args) {
+      StringBuffer sb = new StringBuffer("THIS IS COMPUTER");
+
+      // Find the first occurrence of 'S'
+      int index = sb.indexOf("S");
+
+      // Loop to find all occurrences of 'S'
+      while (index != -1) {
+         System.out.println("Found 'S' at index: " + index);  // Print the index
+         index = sb.indexOf("S", index + 1); 
+      }
+      //System.out.println(sb.substring(4,9));
+      //sb.append("device");
+      //System.out.println(sb);
+      //System.out.println(sb.length());
+   }
+}
