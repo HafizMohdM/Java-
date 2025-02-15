@@ -1,0 +1,78 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+public class StudentDataDetails {
+    public static void main(String[] args) {
+        List<String>StudentName=new ArrayList<>();
+
+        //Adding Elements to the list
+        StudentName.add("hafiz");
+        StudentName.add("kumar");
+        StudentName.add("Vilesh");
+        StudentName.add("priya");
+        StudentName.add("Joe");
+        System.out.println("The students in Esquare are"+StudentName);
+
+        //To add more names need
+               Scanner src=new Scanner(System.in);
+               System.out.println("Enter extra students if there and type exit 0 for not there");
+
+                 while ((true))
+                  {
+                     String name=src.nextLine();
+                     if (name.equalsIgnoreCase("exit") || name.trim().isEmpty())
+                      {
+                        break;                
+                      }
+                  StudentName.add(name);                 
+                    }
+                    
+                    System.out.println("The updated students in Esquare are"+StudentName);
+
+         //Delete a name from Index
+        System.out.println("Enter the student name who exitEsquare");
+        String DeletedName=StudentName.remove(3);
+        System.out.println("The student removed is:"+DeletedName);
+        System.out.println("The updated students in Esquare are"+StudentName);
+       
+        //Update a list from List
+        System.out.println("Enter the student name who has been replaced ");
+        String UpdatedStudent=StudentName.set(3, "ashif");
+        System.out.println("Student replaced is"+UpdatedStudent);
+        System.out.println("The updated list is" +StudentName);
+
+        //Size of the Array
+        System.out.println("Length of updated array");
+        System.out.println(StudentName.size());
+
+        //sort the name alphabeticaly
+        Collections.sort(StudentName,String.CASE_INSENSITIVE_ORDER);
+        System.out.println("Students sorted alphabetically: " + StudentName);
+
+        //To find a person in there or not
+        System.out.println("Enter the student name to search:");
+        String SearchName = src.nextLine();
+        
+        if (StudentName.contains(SearchName)) {
+          int index = StudentName.indexOf(SearchName);
+          System.out.println(SearchName + " is present in the list at index: " + index);
+      } else {
+          System.out.println(SearchName + " is not found in the list.");
+      } 
+           
+        Iterator<String> iterator = StudentName.iterator();  //REMOVE ALSO CAN BE USED BUT IT WILL CAUSE CUNCURRNT EXPECTION HENCE ITERSOTR IS USED
+          while (iterator.hasNext()) 
+            {  
+             String name = iterator.next();
+               if (name.startsWith("k"))
+                {
+                  iterator.remove();  
+                }
+             }
+           System.out.println(("Removed name is"+ StudentName));
+           src.close();
+    }
+}
